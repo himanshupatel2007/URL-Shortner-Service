@@ -1,10 +1,9 @@
 import express from "express"
 
-import authenticatUser from ""
 const app = express()
-const PORT = 3000;
+const PORT = process.env.PORT;
 
-app.get("/login",UserSignIn)
+app.get("/login",)
 
 app.listen(PORT,()=>{
     console.log(`Server started at port:${PORT}`)

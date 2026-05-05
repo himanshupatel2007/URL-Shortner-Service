@@ -4,7 +4,7 @@ export interface URL extends Document{
     originalURL:string;
     shortId:string;
     createdBy:string;
-    createdAt:string;
+    createdAt:Date;
 }
 
 const urlSchema : Schema<URL> = new Schema({
@@ -21,6 +21,12 @@ shortId:{
 createdBy:{
     type:String,
     required:true,
-    
+},
+createdAt:{
+    type:Date,
+    requied:true
 }
 })
+
+const Url = mongoose.model<URL>("url",urlSchema);
+export default Url;
