@@ -1,8 +1,9 @@
 import Express,{Router} from "express"
-import authenticateUser from "../controllers/authentication"
 
 const UserSignUp = Express.Router()
-const UserSignIn = Express.Router()
+const UserLogin = Express.Router()
+const UserRouter = Express.Router()
 
-UserSignIn.get("/",authenticateUser)
+UserLogin.get("/",)
 UserSignUp.post("/",)
+UserRouter.route("/:id").get().post().delete()
